@@ -35,6 +35,7 @@
             this.fieldPassword = new System.Windows.Forms.TextBox();
             this.fieldAge = new System.Windows.Forms.NumericUpDown();
             this.buttonSignUp = new System.Windows.Forms.Button();
+            this.checkShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.fieldAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.fieldName.Size = new System.Drawing.Size(365, 41);
             this.fieldName.TabIndex = 0;
             this.fieldName.Enter += new System.EventHandler(this.Field_Enter);
+            this.fieldName.Leave += new System.EventHandler(this.Field_Leave);
             // 
             // fieldSurname
             // 
@@ -55,15 +57,17 @@
             this.fieldSurname.Size = new System.Drawing.Size(365, 41);
             this.fieldSurname.TabIndex = 1;
             this.fieldSurname.Enter += new System.EventHandler(this.Field_Enter);
+            this.fieldSurname.Leave += new System.EventHandler(this.Field_Leave);
             // 
             // fieldRepeat
             // 
             this.fieldRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fieldRepeat.Location = new System.Drawing.Point(12, 289);
+            this.fieldRepeat.Location = new System.Drawing.Point(13, 279);
             this.fieldRepeat.Name = "fieldRepeat";
             this.fieldRepeat.Size = new System.Drawing.Size(373, 41);
             this.fieldRepeat.TabIndex = 2;
             this.fieldRepeat.Enter += new System.EventHandler(this.Field_Enter);
+            this.fieldRepeat.Leave += new System.EventHandler(this.Field_Leave);
             // 
             // fieldEmail
             // 
@@ -73,6 +77,7 @@
             this.fieldEmail.Size = new System.Drawing.Size(365, 41);
             this.fieldEmail.TabIndex = 3;
             this.fieldEmail.Enter += new System.EventHandler(this.Field_Enter);
+            this.fieldEmail.Leave += new System.EventHandler(this.Field_Leave);
             // 
             // fieldPassword
             // 
@@ -82,6 +87,7 @@
             this.fieldPassword.Size = new System.Drawing.Size(373, 41);
             this.fieldPassword.TabIndex = 4;
             this.fieldPassword.Enter += new System.EventHandler(this.Field_Enter);
+            this.fieldPassword.Leave += new System.EventHandler(this.Field_Leave);
             // 
             // fieldAge
             // 
@@ -116,11 +122,24 @@
             this.buttonSignUp.Text = "Sign up";
             this.buttonSignUp.UseVisualStyleBackColor = true;
             // 
+            // checkShowPassword
+            // 
+            this.checkShowPassword.AutoSize = true;
+            this.checkShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkShowPassword.Location = new System.Drawing.Point(13, 337);
+            this.checkShowPassword.Name = "checkShowPassword";
+            this.checkShowPassword.Size = new System.Drawing.Size(167, 28);
+            this.checkShowPassword.TabIndex = 8;
+            this.checkShowPassword.Text = "Show Password";
+            this.checkShowPassword.UseVisualStyleBackColor = true;
+            this.checkShowPassword.CheckedChanged += new System.EventHandler(this.checkShowPassword_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 482);
+            this.Controls.Add(this.checkShowPassword);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.fieldAge);
             this.Controls.Add(this.fieldPassword);
@@ -145,6 +164,7 @@
         private System.Windows.Forms.TextBox fieldPassword;
         private System.Windows.Forms.NumericUpDown fieldAge;
         private System.Windows.Forms.Button buttonSignUp;
+        private System.Windows.Forms.CheckBox checkShowPassword;
     }
 }
 
