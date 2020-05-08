@@ -45,6 +45,7 @@
             this.fieldName.Name = "fieldName";
             this.fieldName.Size = new System.Drawing.Size(365, 41);
             this.fieldName.TabIndex = 0;
+            this.fieldName.Enter += new System.EventHandler(this.Field_Enter);
             // 
             // fieldSurname
             // 
@@ -53,6 +54,7 @@
             this.fieldSurname.Name = "fieldSurname";
             this.fieldSurname.Size = new System.Drawing.Size(365, 41);
             this.fieldSurname.TabIndex = 1;
+            this.fieldSurname.Enter += new System.EventHandler(this.Field_Enter);
             // 
             // fieldRepeat
             // 
@@ -61,6 +63,7 @@
             this.fieldRepeat.Name = "fieldRepeat";
             this.fieldRepeat.Size = new System.Drawing.Size(373, 41);
             this.fieldRepeat.TabIndex = 2;
+            this.fieldRepeat.Enter += new System.EventHandler(this.Field_Enter);
             // 
             // fieldEmail
             // 
@@ -69,6 +72,7 @@
             this.fieldEmail.Name = "fieldEmail";
             this.fieldEmail.Size = new System.Drawing.Size(365, 41);
             this.fieldEmail.TabIndex = 3;
+            this.fieldEmail.Enter += new System.EventHandler(this.Field_Enter);
             // 
             // fieldPassword
             // 
@@ -77,6 +81,7 @@
             this.fieldPassword.Name = "fieldPassword";
             this.fieldPassword.Size = new System.Drawing.Size(373, 41);
             this.fieldPassword.TabIndex = 4;
+            this.fieldPassword.Enter += new System.EventHandler(this.Field_Enter);
             // 
             // fieldAge
             // 
