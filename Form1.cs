@@ -88,28 +88,35 @@ namespace MobileRegistrationForm
                 {
                     fieldRepeat.PasswordChar = '*'; 
                 }
+
+                registeredUserList.Items.Add(fieldName.Text);
+
             }
         }
-
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            if(fieldPassword.Text != fieldRepeat.Text)
+            if (fieldPassword.Text != fieldRepeat.Text)
             {
                 //passwords are not equal
-                fieldPassword.ForeColor = Color.Red;
-                fieldRepeat.ForeColor = Color.Red;
+                fieldPassword.BackColor = Color.Red;
+                fieldRepeat.BackColor = Color.Red;
                 return;
             }
-            MessageBox.Show("User registered");
+            else if (fieldPassword.Text == fieldRepeat.Text)
+            {
+                fieldPassword.BackColor = Color.Green;
+                fieldRepeat.BackColor = Color.Green;
+            }
 
+            MessageBox.Show("User registered");
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
-            if(fieldPassword.Text == fieldRepeat.Text)
+            if (fieldPassword.Text == fieldRepeat.Text)
             {
-                fieldPassword.ForeColor = Color.Black;
-                fieldRepeat.ForeColor = Color.Black;
+                fieldPassword.BackColor = Color.LightGreen;
+                fieldRepeat.BackColor = Color.LightGreen;
             }
         }
     }
